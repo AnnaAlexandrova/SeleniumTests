@@ -11,7 +11,8 @@ public class ChromeTestCardNumber {
 
     @Before
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\fytyr\\Infra\\WebDrivers\\chromedriver.exe");
+        String chromeDriverPath = "C:\\Users\\fytyr\\Infra\\WebDrivers\\chromedriver.exe";
+        System.setProperty("webdriver.chrome.driver", chromeDriverPath);
         webDriver = new ChromeDriver();
 
         cardNumberPage = new CardNumberPage(webDriver);
